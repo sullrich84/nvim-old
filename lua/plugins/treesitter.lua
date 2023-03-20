@@ -9,6 +9,8 @@ return {
       "markdown",
       "markdown_inline",
       "typescript",
+      "lua",
+      "vim",
     })
   end,
 }
