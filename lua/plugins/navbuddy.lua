@@ -8,7 +8,8 @@ return {
     "numToStr/Comment.nvim",
   },
   keys = {
-    { "<leader>cv", "<cmd>Navbuddy<cr>", desc = "Toggle Navbuddy" },
+    { "<leader>cn", "<cmd>Navbuddy<cr>", desc = "Toggle Navbuddy" },
+    { "<F8>", "<cmd>Navbuddy<cr>", desc = "Toggle Navbuddy" },
   },
   config = function()
     local actions = require("nvim-navbuddy.actions")
@@ -16,34 +17,6 @@ return {
     navbuddy.setup({
       window = {
         border = "rounded",
-      },
-      icons = {
-        File = " ",
-        Module = " ",
-        Namespace = " ",
-        Package = " ",
-        Class = " ",
-        Method = " ",
-        Property = " ",
-        Field = " ",
-        Constructor = " ",
-        Enum = "練",
-        Interface = "練",
-        Function = " ",
-        Variable = " ",
-        Constant = " ",
-        String = " ",
-        Number = " ",
-        Boolean = "◩ ",
-        Array = " ",
-        Object = " ",
-        Key = " ",
-        Null = "ﳠ ",
-        EnumMember = " ",
-        Struct = " ",
-        Event = " ",
-        Operator = " ",
-        TypeParameter = " ",
       },
       mappings = {
         ["<Down>"] = actions.next_sibling,
@@ -54,10 +27,6 @@ return {
         ["<enter>"] = actions.select,
       },
       lsp = { auto_attach = true },
-      source_buffer = {
-        follow_node = true, -- Keep the current node in focus on the source buffer
-        highlight = true, -- Highlight the currently focused node
-      },
     })
   end,
 }
