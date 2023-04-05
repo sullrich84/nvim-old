@@ -42,9 +42,11 @@ return {
         visible = false,
         hide_dotfiles = false,
         hide_gitignored = false,
-        hide_by_name = {
+        never_show = {
           ".DS_Store",
           "thumbs.db",
+        },
+        hide_by_name = {
           "node_modules",
           ".git",
         },
