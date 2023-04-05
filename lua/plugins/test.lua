@@ -1,10 +1,16 @@
 return {
   "vim-test/vim-test",
   lazy = false,
-  keys = {
-    name = "Test",
-    { "<leader>ctn", "<cmd>TestNearest<cr>", desc = "Test nearest" },
-    { "<leader>ctf", "<cmd>TestFile<cr>", desc = "Test file" },
-    { "<leader>ctl", "<cmd>TestLast<cr>", desc = "Test last" },
-  },
+  keys = function()
+    local wk = require("which-key")
+    wk.register({
+      t = {
+        name = "Tests",
+        n = { "<cmd>TestNearest<cr>", "Run nearest test" },
+        f = { "<cmd>TestFile<cr>", "Run test file" },
+        l = { "<cmd>TestLast<cr>", "Rerun latest test" },
+        v = { "<cmd>TestVisit<cr>", "Visit test file" },
+      },
+    }, { prefix = "<leader>c" })
+  end,
 }
