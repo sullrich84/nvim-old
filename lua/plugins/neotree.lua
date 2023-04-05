@@ -24,14 +24,14 @@ return {
           -- Change type
           added = "",
           modified = "",
-          deleted = "✖",
+          deleted = "",
           renamed = "",
           -- Status type
           untracked = "",
           ignored = "",
           unstaged = "",
           staged = "",
-          conflict = "",
+          conflict = "󱐋",
         },
       },
     },
@@ -55,5 +55,8 @@ return {
         ["<space>"] = "none",
       },
     },
+  },
+  keys = {
+    { "<leader>we", "<cmd>Neotree<cr>", desc = "Focus file browser" },
   },
 }
