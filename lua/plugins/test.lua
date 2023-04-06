@@ -1,5 +1,8 @@
 return {
   "vim-test/vim-test",
+  dependencies = {
+    "folke/which-key.nvim",
+  },
   lazy = false,
   keys = function()
     local wk = require("which-key")
