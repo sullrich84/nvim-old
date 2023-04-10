@@ -10,6 +10,7 @@ return {
       "typescript",
       "lua",
       "vim",
+      "python",
     })
   end,
 }

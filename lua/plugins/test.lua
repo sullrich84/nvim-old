@@ -1,8 +1,5 @@
 return {
   "vim-test/vim-test",
-  dependencies = {
-    "folke/which-key.nvim",
-  },
   lazy = false,
   dependencies = {
     "folke/which-key.nvim",
