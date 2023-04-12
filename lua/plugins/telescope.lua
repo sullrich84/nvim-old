@@ -7,5 +7,10 @@ return {
         require("telescope").load_extension("project")
       end,
     },
+    opts = {
+      defaults = {
+        path_display = { "smart" },
+      },
+    },
   },
 }
