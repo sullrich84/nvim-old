@@ -25,7 +25,7 @@ return {
         Package = " ",
         Class = " ",
         Method = " ",
-        Property = " ",
+        Property = "󰓼 ",
         Field = " ",
         Constructor = " ",
         Enum = "練",

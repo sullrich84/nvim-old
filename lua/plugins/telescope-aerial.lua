@@ -10,7 +10,7 @@ return {
       filter_kind = false,
       guides = {
         mid_item = "├ ",
-        last_item = "└ ",
+        last_item = "╰ ",
         nested_top = "│ ",
         whitespace = "  ",
       },
@@ -24,6 +24,10 @@ return {
         ["[["] = false,
         ["]]"] = false,
       },
+    },
+    keys = {
+      { "<leader>cS", "<cmd>AerialToggle<cr>", desc = "Toggle symbols outline" },
+      { "<F10>", "<cmd>AerialToggle<cr>", desc = "Toggle symbols outline" },
     },
   },
 }

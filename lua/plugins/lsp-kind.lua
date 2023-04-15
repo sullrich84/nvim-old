@@ -14,7 +14,7 @@ return {
           Class = " ",
           Interface = " ",
           Module = " ",
-          Property = " ",
+          Property = "󰓼 ",
           Unit = "塞 ",
           Value = " ",
           Enum = "練 ",
