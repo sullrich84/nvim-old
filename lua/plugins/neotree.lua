@@ -6,9 +6,9 @@ return {
   opts = {
     default_component_configs = {
       icon = {
-        folder_closed = "",
-        folder_open = "",
-        folder_empty = "",
+        folder_closed = " ",
+        folder_open = " ",
+        folder_empty = " ",
       },
       modified = {
         symbol = "",
@@ -45,9 +45,9 @@ return {
         never_show = {
           ".DS_Store",
           "thumbs.db",
+          "node_modules",
         },
         hide_by_name = {
-          "node_modules",
           ".git",
         },
       },
