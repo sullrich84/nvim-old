@@ -5,6 +5,6 @@ return {
     direction = "vertical",
   },
   keys = {
-    { "<F9>", "<cmd>ToggleTerm<cr>", desc = "Toggle terminal (vertical)" },
+    -- { "<F9>", "<cmd>ToggleTerm<cr>", desc = "Toggle terminal (vertical)" },
   },
 }
