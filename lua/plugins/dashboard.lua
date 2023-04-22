@@ -19,7 +19,7 @@ return {
              ⠀⠀⠛⠿⠿⠃⠀⠻⠿⠋⠀⠀⠻⠇⠘⠿⠿⠟⠀sully.vim
 ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
       ]]
-      dashboard.section.header.opts.hl = "Identifier"
+      dashboard.section.header.opts.hl = "Keyword"
 
       -- BUTTONS
       dashboard.section.header.val = vim.split(logo, "\n")
