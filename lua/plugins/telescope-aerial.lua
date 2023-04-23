@@ -9,9 +9,9 @@ return {
       show_guides = true,
       filter_kind = false,
       guides = {
-        mid_item = "├ ",
-        last_item = "╰ ",
-        nested_top = "│ ",
+        mid_item = "  ",
+        last_item = "  ",
+        nested_top = "  ",
         whitespace = "  ",
       },
       keymaps = {
@@ -27,7 +27,7 @@ return {
     },
     keys = {
       { "<leader>cS", "<cmd>AerialToggle<cr>", desc = "Toggle symbols outline" },
-      { "<F10>", "<cmd>AerialToggle<cr>", desc = "Toggle symbols outline" },
+      { "<F10>",      "<cmd>AerialToggle<cr>", desc = "Toggle symbols outline" },
     },
   },
 }
