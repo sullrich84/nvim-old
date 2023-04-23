@@ -1,10 +1,22 @@
+local pylsp = {
+  settings = {
+    pylsp = {
+      plugins = {
+        autopep8 = { enabled = false },
+        yapf = { enabled = true },
+        black = { enabed = false },
+        pycodestyle = { enabled = false },
+      },
+    },
+  },
+}
+
 return {
   "neovim/nvim-lspconfig",
-  ---@class PnuginLspOpts
   opts = {
     servers = {
       bashls = {},      -- bash-language-server
-      pylsp = {},       -- python-lsp-server
+      pylsp = pylsp,    -- python-lsp-server
       tsserver = {},    -- typescript-langugage-server
       eslint = {},      -- eslint-lsp   ◍
       html = {},        -- html-lsp
