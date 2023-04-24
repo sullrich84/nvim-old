@@ -3,9 +3,12 @@ return {
   dependencies = {
     "stevearc/aerial.nvim",
     opts = {
-      attach_mode = "window",
+      attach_mode = "global",
       backends = { "lsp", "treesitter", "markdown", "man" },
-      layout = { min_width = 28 },
+      layout = {
+        min_width = 28,
+        placement = "edge"
+      },
       show_guides = false,
       filter_kind = false,
       guides = {

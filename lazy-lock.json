@@ -67,3 +67,4 @@
   "vim-startuptime": { "branch": "master", "commit": "00391e7f86a0fd0ebdb2afdf4336f6712925ce45" },
   "vim-test": { "branch": "master", "commit": "5af7aa2a07c70f730b03c893821366961b108cf2" },
   "which-key.nvim": { "branch": "main", "commit": "94cb020ff33a1e0e22fac1c41663d2c439741f17" }
+}
