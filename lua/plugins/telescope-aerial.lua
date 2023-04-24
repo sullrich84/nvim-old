@@ -3,16 +3,16 @@ return {
   dependencies = {
     "stevearc/aerial.nvim",
     opts = {
-      attach_mode = "global",
+      attach_mode = "window",
       backends = { "lsp", "treesitter", "markdown", "man" },
       layout = { min_width = 28 },
-      show_guides = true,
+      show_guides = false,
       filter_kind = false,
       guides = {
-        mid_item = "  ",
-        last_item = "  ",
-        nested_top = "  ",
-        whitespace = "  ",
+        mid_item = " ",
+        last_item = " ",
+        nested_top = " ",
+        whitespace = " ",
       },
       keymaps = {
         ["[y"] = "actions.prev",
