@@ -22,16 +22,16 @@ return {
       git_status = {
         symbols = {
           -- Change type
-          added = "",
-          modified = "",
-          deleted = "",
-          renamed = "",
+          added = "",
+          modified = "",
+          deleted = "",
+          renamed = "",
           -- Status type
-          untracked = "",
+          untracked = "",
           ignored = "",
           unstaged = "",
-          staged = "",
-          conflict = "󱐋",
+          staged = "",
+          conflict = "",
         },
       },
     },
@@ -45,10 +45,10 @@ return {
         never_show = {
           ".DS_Store",
           "thumbs.db",
-          "node_modules",
         },
         hide_by_name = {
           ".git",
+          "node_modules",
         },
       },
     },
