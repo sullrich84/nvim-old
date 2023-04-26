@@ -3,4 +3,5 @@ return {
   opts = {
     "*",
   },
+  ft = { "css", "react", "javascript", "html", "typescriptreact" }
 }

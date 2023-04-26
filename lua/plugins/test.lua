@@ -1,6 +1,6 @@
 return {
   "vim-test/vim-test",
-  lazy = false,
+  event = "BufReadPost",
   dependencies = {
     "folke/which-key.nvim",
     "akinsho/toggleterm.nvim",
@@ -10,10 +10,10 @@ return {
       require("which-key").register({
         t = {
           name = "Tests",
-          n = { "<cmd>TestNearest -strategy=toggleterm<cr>", "Run nearest test" },
-          f = { "<cmd>TestFile -strategy=toggleterm<cr>", "Run test file" },
-          l = { "<cmd>TestLast -strategy=toggleterm<cr>", "Rerun latest test" },
-          v = { "<cmd>TestVisit -strategy=toggleterm<cr>", "Visit test file" },
+          n = { "<cmd>TestNearest -strategy=kitty<cr>", "Run nearest test" },
+          f = { "<cmd>TestFile -strategy=kitty<cr>", "Run test file" },
+          l = { "<cmd>TestLast -strategy=kitty<cr>", "Rerun latest test" },
+          v = { "<cmd>TestVisit -strategy=kitty<cr>", "Visit test file" },
         },
       }, { prefix = "<leader>c" })
     end

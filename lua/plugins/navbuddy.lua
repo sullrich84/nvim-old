@@ -2,7 +2,7 @@ local icons = require("icons")
 
 return {
   "SmiteshP/nvim-navbuddy",
-  lazy = false,
+  event = "BufReadPost",
   dependencies = {
     "neovim/nvim-lspconfig",
     "SmiteshP/nvim-navic",

@@ -3,8 +3,9 @@ return {
   event = "VeryLazy",
   opts = {
     sections = {
-      -- disable clock
-      lualine_z = {},
+      lualine_x = {},
+      lualine_y = { "location" },
+      lualine_z = { "progress" },
     },
   },
 }
