@@ -6,16 +6,14 @@ return {
   opts = {
     default_component_configs = {
       icon = {
-        folder_closed = " ",
-        folder_open = " ",
-        folder_empty = " ",
+        folder_closed = "",
+        folder_open = "",
+        folder_empty = "",
       },
       indent = {
         with_markers = false,
         indent_size = 2,
         indent_width = 3,
-        expander_collapsed = "",
-        expander_expanded = "",
       },
       modified = {
         symbol = "",
