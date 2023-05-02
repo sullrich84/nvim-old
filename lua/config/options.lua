@@ -3,3 +3,7 @@
 -- Add any additional options here
 
 vim.opt.conceallevel = 0
+
+vim.wo.wrap = true
+vim.wo.linebreak = true
+vim.wo.list = false

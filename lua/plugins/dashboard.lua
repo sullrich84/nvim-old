@@ -1,18 +1,3 @@
-local logo = [[
-             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣤⣴⡶⠖⢀⣀⣤⣤⣤⣀
-             ⠀⠀⠀⣀⣤⣴⣶⣾⣿⣿⣿⣿⣿⣿⠛⣡⣴⣾⣿⣿⣿⣿⣿⣿⣷⡀
-             ⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧
-             ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⢻⣿⣿⣿⣿⠟⣉⠻⣿⣶⣿⡄
-             ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠈⢿⣿⣿⣿⡀⠻⣷⣌⠙⢿⣧
-             ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⡙⠻⠿⠁⠀⠈⠙⠳⢄⡉
-             ⠸⢸⣿⣿⣿⣿⣿⡿⢛⣿⣿⣿⣿⣿⣿⣿⣿⣟⠀⠀⢀⣀⠀⠀⠀⣤⣈
-             ⠀⠘⣿⣿⣿⣿⠋⠐⠿⠿⠿⠿⢃⠘⣿⣿⣿⣿⠀⢰⣿⡟⠀⠀⣰⣿⡟
-             ⠀⠀⣿⣿⣿⣿⠀⣿⣿⡆⠀⠀⣾⠀⣿⣿⣿⣿⠀⠈⠻⣿⣿⣿⣿⡿⠁
-             ⠀⠀⣿⣿⣿⣿⠀⣿⣿⣷⠀⠀⣿⡆⢸⣿⣿⣿⠀⠀⠀⠀⠉⠉⠁
-             ⠀⠀⠛⠿⠿⠃⠀⠻⠿⠋⠀⠀⠻⠇⠘⠿⠿⠟⠀sully.vim
-┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
-]]
-
 return {
   {
     "goolord/alpha-nvim",
@@ -45,14 +30,36 @@ return {
         },
         shortcut = {
           { icon = " ",  desc = "Projects", group = "@label",   action = "Telescope project",    key = "p", },
-          { icon = " ",  desc = "Recent",   group = "@label",   action = "Telescope old_files",  key = "r", },
+          { icon = " ",  desc = "Recent",   group = "@label",   action = "Telescope oldfiles",   key = "r", },
           { icon = " ",  desc = "Grep",     group = "Number",   action = "Telescope live_grep",  key = "g", },
           { icon = "󰍉 ", desc = "Find",     group = "Number",   action = "Telescope find_files", key = "f", },
           { icon = " ",  desc = "Config",   group = "@comment", action = "e $MYVIMRC",           key = "c", },
           { icon = " ",  desc = "Update",   group = "@comment", action = "Lazy update",          key = "u" },
-          { icon = "󰛯 ", desc = "Health",   group = "@comment", action = "checkhealth",          key = "h", },
+          -- { icon = "󰛯 ", desc = "Health",   group = "@comment", action = "checkhealth",          key = "h", },
           { icon = "󰩈 ", desc = "Quit",     group = "@error",   action = "qa",                   key = "q", },
         },
+        packages = {
+          enabled = false
+        },
+        project = {
+          enable = true,
+          limit = 8,
+          icon = " ",
+          label = " Recent Projects:",
+          action = "Telescope find_files cwd="
+        },
+        mru = {
+          enable = true,
+          limit = 8,
+          icon = " ",
+          label = " Recent files:",
+        },
+        footer = function()
+          local stats = require("lazy").stats()
+          local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+          local footer = "⚡ Neovim loaded " .. stats.count .. " plugins in " .. ms .. "ms"
+          return { "", footer }
+        end,
       },
     },
     dependencies = {
@@ -95,5 +102,6 @@ return {
 --       return dashboard
 --     end,
 --   }
+-- }
 -- }
 -- }
