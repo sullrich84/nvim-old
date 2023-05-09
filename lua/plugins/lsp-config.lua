@@ -1,5 +1,6 @@
 local pylsp = {
   settings = {
+    pyright = {},
     pylsp = {
       plugins = {
         autopep8 = { enabled = false },
@@ -16,7 +17,8 @@ return {
   opts = {
     servers = {
       bashls = {},      -- bash-language-server
-      pylsp = pylsp,    -- python-lsp-server
+      -- pylsp = pylsp,    -- python-lsp-server
+      pyright = {},     -- microsoft python lsp
       tsserver = {},    -- typescript-langugage-server
       eslint = {},      -- eslint-lsp   ◍
       html = {},        -- html-lsp
